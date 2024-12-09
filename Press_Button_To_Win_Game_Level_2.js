@@ -29,18 +29,18 @@ let stopExecution = false;
 
 function cycleMessage() {
     if (stopExecution) return;
-    const dText = document.getElementById('dText');
-    dText.innerText = messages[currentIndex];
-    currentIndex = (currentIndex + 1) % messages.length;
-    document.getElementById('dButton').style.backgroundColor = "bisque";
-    document.getElementById('dText').style.color = "black";
+         const dText = document.getElementById('dText');
+         dText.innerText = messages[currentIndex];
+         currentIndex = (currentIndex + 1) % messages.length;
+         document.getElementById('dButton').style.backgroundColor = "bisque";
+         document.getElementById('dText').style.color = "black";
 }
 
 document.getElementById('button3').addEventListener('click', function(event) {
     if (event.detail === 3) {
-        stopExecution = true; 
-        document.getElementById('dText').textContent = "CONGRATULATIONS. YOU WON!!!";
-        document.getElementById('dButton').style.backgroundColor = "cyan";
+         stopExecution = true; 
+         document.getElementById('dText').textContent = "CONGRATULATIONS. YOU WON!!!";
+         document.getElementById('dButton').style.backgroundColor = "cyan";
     }
 });
 
